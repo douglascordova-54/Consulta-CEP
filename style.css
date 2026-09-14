@@ -1,0 +1,137 @@
+/* Reset básico: garante que padding e border entrem no cálculo de largura/altura */
+*{
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body{
+    margin: 0;
+    justify-content: center; /* centraliza o <main*/
+    padding: 20px 10px;
+    min-height: 100vh;
+    display: flex;
+    background-color: rgb(243, 249, 255); 
+    color: rgb(0, 0, 0);
+}
+
+
+main{
+    width: 100%;
+    max-width: 420px; /* limita a largura em telas grandes */
+}
+
+/* Título da página */
+h1{
+    color: rgb(12, 87, 153);
+    font-size: 2rem;
+    margin: 0 0 20px;
+}
+
+/*formulário */
+form{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* sombra */
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* espaçamento entre os campos */
+}
+
+/* Rótulos dos campos */
+label{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Campos de texto (CEP e Cidade) */
+input[type="text"]{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgb(10, 10, 10);
+    border-radius: 6px;
+    font-size: 1rem;
+    color: black;
+}
+
+/* 
+Botão de consulta
+*/
+button{
+    margin-top: 6px;
+    padding: 0;
+    border: none;
+    background: transparent; 
+    cursor: pointer;
+}
+
+/* deixa com cara de botão */
+button a{
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    background: #15803d;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Efeito ao passar o mouse no link */
+button a:hover{
+    opacity: 0.9;
+}
+
+/* Consultando...*/
+#mensagem{
+    min-height: 1.2rem;
+    font-size: 1rem;
+    color: #b7becf;
+}
+
+/* Caixa onde exibe o resultado da consulta */
+#resultado{
+    margin: 8px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    margin-top: 15px;
+}
+
+/* Cada linha/parágrafo dentro do resultado */
+#resultado p{
+    margin: 8px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f3f4f6; /* linha separadora entre os itens */
+}
+
+/* Remove a linha do último item */
+#resultado p:last-child{
+    border-bottom: none;
+}
+
+/* Destaque para para os resultados*/
+#resultado strong{
+    color: #1e3a8a;
+    margin-right: 4px;
+}
+
+/* Botão "Abrir no Google Maps" link*/
+a#linkMaps{
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    background: #15803d;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Efeito quando passa o mouse por cima */
+a#linkMaps:hover{
+    opacity: 0.9;
+}
