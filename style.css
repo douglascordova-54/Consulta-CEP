@@ -6,7 +6,7 @@
 /* Estilo geral da página */
 body{
     margin: 0;
-    justify-content: center; /* centraliza o <main*/
+    justify-content: center; /* centraliza o main*/
     padding: 20px 10px;
     min-height: 100vh;
     display: flex;
@@ -61,14 +61,25 @@ Botão de consulta
 */
 button{
     margin-top: 6px;
-    padding: 0;
+    padding: 12px;
     border: none;
-    background: transparent; 
+    border-radius: 6px;
+    background: #0c5799;
+    color: #ffffff;
+    font-size: 1rem;
     cursor: pointer;
 }
+button:hover{
+    opacity: 0.9;
+}
 
-/* deixa com cara de botão */
-button a{
+/* Caso especial: botão que apenas envolve um link 
+quem recebe o visual é o <a> dentro dele. */
+button:has(a){
+    padding: 0;
+    background: transparent;
+}
+button:has(a) a{
     display: block;
     text-align: center;
     padding: 12px;
@@ -78,9 +89,7 @@ button a{
     text-decoration: none;
     font-weight: 600;
 }
-
-/* Efeito ao passar o mouse no link */
-button a:hover{
+button:has(a) a:hover{
     opacity: 0.9;
 }
 
